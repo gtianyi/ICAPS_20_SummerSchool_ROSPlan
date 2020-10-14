@@ -19,7 +19,7 @@
 
 (:durative-action move
  :parameters (?robot - robot ?from - wp ?to - wp)
- :duration (= ?duration (distance ?from ?to))
+ :duration (= ?duration (/ (distance ?from ?to) 1))
  :condition (and
     (at start (robot_at_wp ?robot ?from))
     )
